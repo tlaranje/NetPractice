@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by \<tlaranje\>.*
+*This project has been created as part of the 42 curriculum by <tlaranje\>.*
 
 # NetPractice
 
@@ -35,7 +35,7 @@ Then navigate to `http://localhost:49242` in your browser.
 - Use the **Evaluation** tab to generate a random configuration (also valid for peer-evaluation).
 - At each level, a non-functioning network diagram is shown. Modify the unshaded fields until the network works.
 - Use **[Check again]** to verify your configuration.
-- Use **[Get my config]** to export your solution for that level.
+- Use **[Get my config]** to export your solution for that level — do this before moving to the next level.
 - Once a level is complete, click **[Next level]** to continue.
 
 ### Exporting and submitting
@@ -50,20 +50,30 @@ During the peer-evaluation defense, you will be asked to complete 3 random level
 
 ### Networking concepts studied
 
-- **TCP/IP addressing** — how IP addresses are structured and assigned to devices
-- **Subnet masks** — how masks define the network and host portions of an address
-- **CIDR notation** — shorthand representation of IP address + mask (e.g., `/24`)
-- **Default gateways** — the router interface a host uses to reach addresses outside its subnet
-- **Routing tables** — how routers and hosts decide where to forward packets
-- **Routers and switches** — routers connect different networks; switches connect devices within the same network
+- **TCP/IP addressing** — how IP addresses are structured and assigned to network interfaces
+- **Subnet masks** — how masks define the network and host portions of an address, in dotted-decimal and CIDR notation (e.g. `/24`)
+- **Default gateways** — the router interface a host uses to forward packets outside its local subnet
+- **Routing tables** — how routers and hosts decide where to forward packets, using route matching and next-hop gateways
+- **Routers** — devices that connect different networks and forward packets between them based on routing tables
+- **Switches** — devices that connect multiple hosts within the same network at the data-link layer
+- **OSI model layers** — understanding which layer handles addressing (Layer 3 — Network), switching (Layer 2 — Data Link), and physical transmission (Layer 1)
 
 ### References
 
-- [NetPractice Guide - GitHub repo by lpaube](https://github.com/lpaube/NetPractice)
+- [NetPractice Guide by lpaube — GitHub](https://github.com/lpaube/NetPractice)
+- [Cisco — Understanding IP Addressing and Subnetting](https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html)
+- [Subnet Calculator](https://www.subnet-calculator.com/)
+- [Khan Academy — How the Internet Works](https://www.khanacademy.org/computing/computers-and-internet)
+- [RFC 791 — Internet Protocol specification](https://datatracker.ietf.org/doc/html/rfc791)
+- [Wikipedia — OSI model](https://en.wikipedia.org/wiki/OSI_model)
+- [Wikipedia — Classless Inter-Domain Routing (CIDR)](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 
 ### AI usage
 
-AI was used during this project to:
-- Help clarify networking concepts such as subnet mask calculations and routing table logic
-- Double-check understanding of how default gateways and routes interact
-- Help format this README.
+AI (Claude by Anthropic) was used during this project for the following tasks:
+
+- **Understanding concepts**: clarifying how subnet mask calculations work, how routing tables are evaluated (first-match logic), and how default gateways interact with routing
+- **Debugging**: asking targeted questions when a level's logs showed errors like "destination does not match any route" or "packet not for me"
+- **README**: generating the initial draft of this README, which was then reviewed, corrected, and adapted to match the actual project
+
+All AI-generated content was verified against the NetPractice simulation and official documentation before being accepted.
